@@ -75,13 +75,15 @@ class BaseBinarizer:
         #     spk_map.add(spk_name)
         # spk_map = {x: i for i, x in enumerate(sorted(list(spk_map)))}
         # assert len(spk_map) == 0 or len(spk_map) <= hparams['num_spk'], len(spk_map)
+        spks = []
+        for ds_id, processed_data_dir in enumerate(self.processed_data_dirs):
+            spks.extend(os.listdir(processed_data_dir))
+        spk_map = {spk: i for i, spk in enumerate(spks)}
         spk_map_fn = f"{hparams['binary_data_dir']}/spk_map.json"
-        if os.path.exists(spk_map_fn):
-            spk_map = json.load(open(spk_map_fn))
-            return spk_map
-        else:
-            print(f"{spk_map_fn} not found!")
-            return None
+        print(f" SPK MAP {spk_map}")
+        json.dump(spk_map, open(spk_map_fn, 'w', encoding='utf8'))
+        return spk_map
+
         
     def item_name2spk_id(self, item_name):
         return self.spk_map[self.item2spk[item_name]]
