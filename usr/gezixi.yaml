@@ -81,15 +81,15 @@ max_tokens: 9600  # max number of mel frame in a mini-batch
 ds_workers: 8
 
 use_slur_embed: true # true if use slur info
-use_energy_embed: false
+use_energy_embed: true
 use_gt_dur: true
-use_gt_f0: true # vocoder needs gt f0
-use_pitch_embed: true # whether to predict pitch
+use_gt_f0: false # vocoder needs gt f0
+use_pitch_embed: false # whether to predict pitch
 use_pos_embed: true
 use_spk_embed: false # use resemblyzer to encode speaker contribute
 use_spk_id: true # use speaker id
 use_uv: true # always true
-use_midi: false
+use_midi: true
 use_pe_assist: false
 predict_pitch: false
 
