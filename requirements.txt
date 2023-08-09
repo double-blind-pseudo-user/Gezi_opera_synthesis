@@ -28,3 +28,5 @@ pytorch-lightning
 h5py
 pypinyin
 g2pM
+git+https://github.com/sooftware/conformer
+git+https://github.com/CompVis/taming-transformers
