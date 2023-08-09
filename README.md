@@ -1,7 +1,7 @@
 # Gezi Opera Synthesis
 The official implementation of our AAAI submission *Hokkien-pretrained Fine-grained Tune Modeling for Gezi Opera Synthesis*, which is under double-blind review.
 <img src="assets/model.png" width=80%>
-## 📖 Environments and Dataset
+## :card_file_box: Environments and Dataset
 1. Create an environment with anaconda for example:
 ```bash
 conda create -n gezi_opera python=3.8
