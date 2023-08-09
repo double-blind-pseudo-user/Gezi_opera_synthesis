@@ -81,15 +81,15 @@ max_tokens: 9600  # max number of mel frame in a mini-batch
 ds_workers: 8
 
 use_slur_embed: true # true if use slur info
-use_energy_embed: false
+use_energy_embed: true
 use_gt_dur: true
-use_gt_f0: true # vocoder needs gt f0
-use_pitch_embed: true # whether to predict pitch
+use_gt_f0: false # vocoder needs gt f0
+use_pitch_embed: false # whether to predict pitch
 use_pos_embed: true
 use_spk_embed: false # use resemblyzer to encode speaker contribute
 use_spk_id: true # use speaker id
 use_uv: true # always true
-use_midi: false
+use_midi: true
 use_pe_assist: false
 predict_pitch: false
 
@@ -131,20 +131,20 @@ max_frames: 6000 # max frames of a single wav piece item
 slice_len: 256
 binarizer_cls: data_gen.singing.binarize.GeZiBinarizer
 raw_data_dir: 'data/raw/GeZiXi'
-processed_data_dir: 'data/processed/opera_p'
+processed_data_dir: 'data/processed/GOAT'
 # binary_data_dir: 'data/binary/hokkien_speech'
-binary_data_dir: 'data/binary/opera_test'
-num_spk: 11
+binary_data_dir: 'data/binary/GOAT'
+num_spk: 5
 datasets: [
-  'GeZiXi',
+  'GOAT',
 ]
-# test_prefixes: [
-#   '千古长恨-此去云南路千里-赵美玉-闺门旦', # 七字调
-#   '三请樊梨花-双脚跪落啊妻灵前-薛丁山-小生', # 大哭
-#   '杨门女将-你本是杨家传宗将-穆桂英-刀马旦', # 小哭
-#   '沈园情-从今你我影随身-唐婉-闺门旦', # 梅花调
-#   '平贵别窑-二次战鼓-薛平贵-武生' # 杂碎调
-# ]
+test_prefixes: [
+  '千古长恨-此去云南路千里-赵美玉-闺门旦', # 七字调
+  '三请樊梨花-双脚跪落啊妻灵前-薛丁山-小生', # 大哭
+  '杨门女将-你本是杨家传宗将-穆桂英-刀马旦', # 小哭
+  '沈园情-从今你我影随身-唐婉-闺门旦', # 梅花调
+  '平贵别窑-二次战鼓-薛平贵-武生' # 杂碎调
+]
 # test_prefixes: [
 #   'SuiSiann_0001',
 #   'SuiSiann_0003',
@@ -152,9 +152,9 @@ datasets: [
 #   'SuiSiann_0007',
 #   'SuiSiann_0011'
 # ]
-test_prefixes: [
-  'lseh-Wo_ben_shi-Qiong_lin_yan-qm',
-]
+# test_prefixes: [
+#   'lseh-Wo_ben_shi-Qiong_lin_yan-qm',
+# ]
 reset_phone_dict: true
 binarization_args:
   with_wav: true
