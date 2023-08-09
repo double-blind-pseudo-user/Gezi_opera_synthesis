@@ -23,14 +23,14 @@ CUDA_VISIBLE_DEVICES=0 nohup python data_gen/tts/bin/binarize.py \
 ```
 The binarized data will be saved to `data/binary`.
 
-## :tw-1f1f9: Training
+## :pencil2: Training
 Run the following scripts to train the model:
 ```shell
 CUDA_VISIBLE_DEVICES=0 nohup python tasks/run.py \
 --config usr/configs/gezixi.yaml --exp_name your_experiments_name --reset \
 > training.log 2>&1 &
 ```
-## :tw-1f1ee: Inference
+## :loud_sound: Inference
 When training is done, run the following scripts to generate audio:
 ```shell
 CUDA_VISIBLE_DEVICES=0 nohup python tasks/run.py \
