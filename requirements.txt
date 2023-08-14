@@ -24,7 +24,7 @@ jieba
 einops
 chardet
 pretty-midi
-pytorch-lightning
+pytorch-lightning==0.7.1
 torchvision
 h5py
 pypinyin
