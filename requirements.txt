@@ -25,6 +25,7 @@ einops
 chardet
 pretty-midi
 pytorch-lightning
+torchvision
 h5py
 pypinyin
 g2pM
