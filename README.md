@@ -1,5 +1,5 @@
 # Gezi Opera Synthesis
-The official implementation of our AAAI submission *Fine-grained Tune Modeling for Gezi Opera Synthesis with Hokkien Pre-Training*, which is under double-blind review.
+The official implementation of our AAAI submission *FT-GAN: Fine-grained Tune Modeling for Chinese Opera Synthesis*, which is under double-blind review.
 <img src="assets/model.png" width=80%>
 ## :card_file_box: Environments and Dataset
 1. Create an environment with anaconda for example:
